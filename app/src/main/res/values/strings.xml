@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">YperIntern Test</string>
+    <string name="no_item_str">아이템이 없습니다.</string>
+    <string name="add">추가</string>
+</resources>

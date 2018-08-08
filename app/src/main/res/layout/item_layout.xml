@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- LinearLayout은 구성요소를 선형으로 배치할 때 적합한다.
+     즉, 세로 또는 가로로만 배치할 때 사용.
+     과제에서 아이템 레이아웃은 구성 요소가 선형으로 배치되어 있지 않았으므로 ConstraintLayout이 더 적합하다.-->
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="vertical">
+    <!-- ConstraintLayout은 클릭 불가가 디폴트값.
+         레이아웃 뷰를 클릭하게 하고 싶으면 xml 파일에서 clickable를 true로 변경하거나
+         액티비티? 상에서 코드로 값을 변경한다. 근데 그게 어디서 무슨 함수를 써야 하는 건지를 모르겠네...-->
+
+    <!-- 시각 -->
+    <TextView
+        android:id="@+id/time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="2018.07.01 03:25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 운행 정보 고유키 -->
+    <TextView
+        android:id="@+id/key_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="56463"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.963"
+        app:layout_constraintStart_toEndOf="@+id/time_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 주소 -->
+    <TextView
+        android:id="@+id/address_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="서울특별시 은평구 갈현로45길 57"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_text" />
+
+</android.support.constraint.ConstraintLayout>
